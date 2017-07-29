@@ -17,19 +17,42 @@
         };
         firebase.initializeApp(config);
     </script>
+
+    <script>
+        var content = {
+            bonyo : "Joy",
+            name : "Teresa",
+            gender : "Female",
+            city : "Tokyo‎",
+            first_day : "2017/10/26",
+            last_day : "2017/10/30",
+            price_plan : "4-6 Days $8/day",
+            start_point : "Bus station",
+            people_total : "5",
+            age_3 : "1",
+            age_12 : "1",
+            age_65 : "1",
+            want_to_do : "Drug store-shopping‎",
+            transportation : "On foot, By subway and train",
+            japan : "1 person has (independent travel).",
+            dietary_restriction : "No",
+            needs : "No",
+            ps : "No",
+            status : 0
+        };
+    </script>
+
     <script>
         // Get a reference to the database service
         var database = firebase.database();
 
-        function writeUserData(userId, name, email, imageUrl) {
-            firebase.database().ref('users/' + userId).set({
-                username: name,
-                email: email,
-                profile_picture : imageUrl
+        function writeUserCustomTripData(userId, content) {
+            firebase.database().ref('custom_trip/' + userId).set({
+                content: content
             });
         }
 
-        writeUserData(1, 'max', 'asd@gmail.com', 'http://www.google.com.tw');
+        writeUserCustomTripData(1, content);
     </script>
 </head>
 <body>

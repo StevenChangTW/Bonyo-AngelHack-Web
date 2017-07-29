@@ -15,4 +15,6 @@
 //    return view('welcome');
 //});
 
-Route::get('trip/custom/store', 'TripController@index')->name('trip.custom.store');
+Route::get('trip/custom/store', 'TripController@store')->name('trip.custom.store');
+
+Route::get('trip/custom/show/{id}', 'TripController@show')->name('trip.custom.show');

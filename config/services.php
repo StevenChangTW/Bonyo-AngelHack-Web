@@ -35,4 +35,12 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+    'firebase' => [
+        'api_key' => env('FIREBASE_KEY'), // Only used for JS integration
+        'auth_domain' => 'AUTH_DOMAIN', // Only used for JS integration
+        'database_url' => env('FIREBASE_API_URL_1'),
+        'secret' => env('FIREBASE_SECRET'),
+        'storage_bucket' => 'STORAGE_BUCKET', // Only used for JS integration
+    ]
+
 ];

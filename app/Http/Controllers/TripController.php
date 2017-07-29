@@ -14,7 +14,7 @@ class TripController extends Controller
      */
     public function index()
     {
-        return view('trip_custom');
+
     }
 
     /**
@@ -35,18 +35,18 @@ class TripController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return view('trip_custom');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
-        //
+        return view('review_custom_trip',['userId' => $id]);
     }
 
     /**
