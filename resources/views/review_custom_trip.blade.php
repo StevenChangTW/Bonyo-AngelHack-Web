@@ -55,23 +55,23 @@
     <div id="trip">
         <ul id="trip_ul" class="list-group">
             <li id="3" style="display: none;" class="list-group-item">Which Bonyo's schedule would the user like to book?</li>
-            <li id="10" class="list-group-item">The user's name</li>
-            <li id="7" class="list-group-item">Gender</li>
-            <li id="4" class="list-group-item">The city / cities the user are visiting</li>
-            <li id="6" class="list-group-item">First day of the trip</li>
-            <li id="9" class="list-group-item">Last day of the trip</li>
-            <li id="13" class="list-group-item">Price plan</li>
-            <li id="15" class="list-group-item">The starting point of each day</li>
-            <li id="12" class="list-group-item">How many people will be attending this trip?</li>
-            <li id="1" class="list-group-item">How many child under the age of 3?</li>
-            <li id="0" class="list-group-item">How many child under the age of 12?</li>
-            <li id="2" class="list-group-item">How many people above the age of 65?</li>
-            <li id="18" class="list-group-item">Things the user would like to experience during this trip</li>
-            <li id="17" class="list-group-item">Your preferred ways to explore the city</li>
-            <li id="8" class="list-group-item">Have the user ever been to Japan?</li>
-            <li id="5" class="list-group-item">Dietary restriction</li>
-            <li id="11" class="list-group-item">Needs and preferences</li>
-            <li id="14" class="list-group-item">Anything the user would like to say to the team</li>
+            <li id="10" class="list-group-item list-group-item-info">The user's name</li>
+            <li id="7" class="list-group-item list-group-item-success">Gender</li>
+            <li id="4" class="list-group-item list-group-item-info">The city / cities the user are visiting</li>
+            <li id="6" class="list-group-item list-group-item-success">First day of the trip</li>
+            <li id="9" class="list-group-item list-group-item-info">Last day of the trip</li>
+            <li id="13" class="list-group-item list-group-item-success">Price plan</li>
+            <li id="15" class="list-group-item list-group-item-info">The starting point of each day</li>
+            <li id="12" class="list-group-item list-group-item-success">How many people will be attending this trip?</li>
+            <li id="1" class="list-group-item list-group-item-info">How many child under the age of 3?</li>
+            <li id="0" class="list-group-item list-group-item-success">How many child under the age of 12?</li>
+            <li id="2" class="list-group-item list-group-item-info">How many people above the age of 65?</li>
+            <li id="18" class="list-group-item list-group-item-success">Things the user would like to experience during this trip</li>
+            <li id="17" class="list-group-item list-group-item-info">Your preferred ways to explore the city</li>
+            <li id="8" class="list-group-item list-group-item-success">Have the user ever been to Japan?</li>
+            <li id="5" class="list-group-item list-group-item-info">Dietary restriction</li>
+            <li id="11" class="list-group-item list-group-item-success">Needs and preferences</li>
+            <li id="14" class="list-group-item list-group-item-info">Anything the user would like to say to the team</li>
             <li id="16" style="display: none;" class="list-group-item">Status</li>
         </ul>
     </div>
