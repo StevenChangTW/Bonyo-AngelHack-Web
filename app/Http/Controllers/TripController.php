@@ -24,7 +24,7 @@ class TripController extends Controller
      */
     public function create()
     {
-        //
+        return view('design_trip');
     }
 
     /**

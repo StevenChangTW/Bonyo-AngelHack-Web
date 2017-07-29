@@ -18,3 +18,5 @@
 Route::get('trip/custom/store', 'TripController@store')->name('trip.custom.store');
 
 Route::get('trip/custom/show/{id}', 'TripController@show')->name('trip.custom.show');
+
+Route::get('trip/custom/create', 'TripController@create')->name('trip.custom.create');
