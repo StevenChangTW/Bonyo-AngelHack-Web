@@ -33,15 +33,12 @@
         function readUserCustomTripData(userId) {
             var userId = userId;
             return firebase.database().ref('/custom_trip/' + userId).once('value').then(function(snapshot) {
-                var username = snapshot.val();
-                console.log(username);
+                var user = snapshot.val();
                 var i = 0;
-                $.each(username.content, function (index, value) {
+                $.each(user.content, function (index, value) {
                     var obj = $('.list-group #'+i);
                     obj.append('<sapn style="color:black;">&nbsp;&nbsp;' + value + '</span>');
-//                    obj.text(obj.text() + '  Answer: ' + value);
                     i++;
-                    console.log(obj.text());
                 });
             });
         }
