@@ -174,7 +174,7 @@
             <span class="input-group-addon" id="basic-addon1">Expense Items</span>
             <input id="spending" placeholder="" class="form-control" aria-describedby="basic-addon1">
             <span class="input-group-addon">¥</span>
-            <input id="dollars" placeholder="Estimated Cost" class="form-control" aria-describedby="basic-addon1">
+            <input id="dollars" placeholder="" class="form-control" aria-describedby="basic-addon1">
         </div>
         <br>
         {{--<div class="input-group">
