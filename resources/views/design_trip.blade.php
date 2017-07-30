@@ -72,8 +72,8 @@
         function createActive() {
             var time1 = $("#timepicker1").val();
             var time2 = $("#timepicker2").val();
-            var active = $("#active").val();
-            $('#last_schedule_li').before('<li><a href="#"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>' + time1 + ' ~ ' + time2 + '&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: red;">' + active + '</span></li>');
+            var active = $("#title").val();
+            $('#last_schedule_li').before('<li><a href="#"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a> ' + time1 + ' ~ ' + time2 + '&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: red;">' + active + '</span></li>');
 
             $(document).ready(function () {
                 $('#schedule li a').click(function () {
@@ -89,6 +89,13 @@
             var now_day = parseInt(last_day) + 1;
             $('#add_days').before('<li><a href="#"><span>' + now_day + '</span></a></li>');
         }
+
+        $(document).ready(function () {
+            $('#action_type li').click(function () {
+                var type = $(this).text();
+                $('#action_type_name').val(type);
+            })
+        })
     </script>
     <div>
         <nav class="navbar navbar-default navbar-fixed-top">
@@ -135,33 +142,47 @@
         </div>
         <br>
         <div class="input-group">
-            <span class="input-group-addon" id="basic-addon1">Action</span>
-            <input id="active" placeholder="Action Name" class="form-control" aria-describedby="basic-addon1">
+            <span class="input-group-addon" id="basic-addon1">Title</span>
+            <input id="title" class="form-control" aria-label="Text input with dropdown button">
+            <div class="input-group-btn">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Type<span class="caret"></span></button>
+                <ul id="action_type" class="dropdown-menu dropdown-menu-right">
+                    <li><a href="#">Traffic</a></li>
+                    <li><a href="#">Food</a></li>
+                    <li><a href="#">Tourist Spot</a></li>
+                    <li><a href="#">Buy/Shop</a></li>
+                    <li><a href="#">Accommodations</a></li>
+                    <li><a href="#">Activities</a></li>
+                    <li><a href="#">Others</a></li>
+                </ul>
+            </div>
+            <input id="action_type_name" class="form-control" aria-label="Text input with dropdown button">
         </div>
+
         <br>
         <div class="input-group">
             <span class="input-group-addon" id="basic-addon1">Location</span>
-            <input id="location" placeholder="Location" class="form-control" aria-describedby="basic-addon1">
+            <input id="location" placeholder="" class="form-control" aria-describedby="basic-addon1">
         </div>
         <br>
         <div class="input-group">
             <span class="input-group-addon" id="basic-addon1">Content</span>
-            <input id="content" placeholder="Content" class="form-control" aria-describedby="basic-addon1">
+            <input id="content" placeholder="" class="form-control" aria-describedby="basic-addon1">
         </div>
         <br>
         <div class="input-group">
-            <span class="input-group-addon" id="basic-addon1">Spending</span>
-            <input id="spending" placeholder="Items" class="form-control" aria-describedby="basic-addon1">
-            <span class="input-group-addon">$</span>
-            <input id="dollars" placeholder="Value" class="form-control" aria-describedby="basic-addon1">
+            <span class="input-group-addon" id="basic-addon1">Expense Items</span>
+            <input id="spending" placeholder="" class="form-control" aria-describedby="basic-addon1">
+            <span class="input-group-addon">¥</span>
+            <input id="dollars" placeholder="Estimated Cost" class="form-control" aria-describedby="basic-addon1">
         </div>
         <br>
-        <div class="input-group">
+        {{--<div class="input-group">
             <span class="input-group-addon" id="basic-addon1">Estimate</span>
-            <span class="input-group-addon">$</span>
+            <span class="input-group-addon">¥</span>
             <input id="estimate" placeholder="Cost" class="form-control" aria-describedby="basic-addon1">
         </div>
-        <br>
+        <br>--}}
         <div>
             <button onclick="createActive();" type="button" class="btn btn-secondary" style="float: right; margin: 0 10px; width: 100px;">
                 Active <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
