@@ -38,7 +38,7 @@
                 var i = 0;
                 $.each(username.content, function (index, value) {
                     var obj = $('.list-group #'+i);
-                    obj.append('<sapn style="color:red;">&nbsp;&nbsp;' + value + '</span>');
+                    obj.append('<sapn style="color:black;">&nbsp;&nbsp;' + value + '</span>');
 //                    obj.text(obj.text() + '  Answer: ' + value);
                     i++;
                     console.log(obj.text());
