@@ -135,8 +135,8 @@
         </div>
         <br>
         <div class="input-group">
-            <span class="input-group-addon" id="basic-addon1">Active</span>
-            <input id="active" placeholder="Active Name" class="form-control" aria-describedby="basic-addon1">
+            <span class="input-group-addon" id="basic-addon1">Action</span>
+            <input id="active" placeholder="Action Name" class="form-control" aria-describedby="basic-addon1">
         </div>
         <br>
         <div class="input-group">
