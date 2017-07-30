@@ -166,9 +166,9 @@
             <button onclick="createActive();" type="button" class="btn btn-secondary" style="float: right; margin: 0 10px; width: 100px;">
                 Active <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
             </button>
-            <button type="button" class="btn btn-secondary" style="float: right; margin: 0 10px; width: 100px;">
-                Schedule <span class="glyphicon glyphicon-floppy-saved" aria-hidden="true"></span>
-            </button>
+            {{--<button type="button" class="btn btn-secondary" style="float: right; margin: 0 10px; width: 100px;">--}}
+                {{--Schedule <span class="glyphicon glyphicon-floppy-saved" aria-hidden="true"></span>--}}
+            {{--</button>--}}
         </div>
     </div>
 </body>
