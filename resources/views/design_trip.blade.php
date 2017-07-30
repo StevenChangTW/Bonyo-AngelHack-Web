@@ -68,6 +68,27 @@
                 scrollbar: true
             });
         } );
+
+        function createActive() {
+            var time1 = $("#timepicker1").val();
+            var time2 = $("#timepicker2").val();
+            var active = $("#active").val();
+            $('#last_schedule_li').before('<li><a href="#"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>' + time1 + ' ~ ' + time2 + '&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: red;">' + active + '</span></li>');
+
+            $(document).ready(function () {
+                $('#schedule li a').click(function () {
+                    $(this).parent().remove();
+                });
+            });
+
+            $('#trip_active_content div:not(#time) input').val('');
+        }
+
+        function addDay() {
+            var last_day = $('#add_days').prev().children().children().text();
+            var now_day = parseInt(last_day) + 1;
+            $('#add_days').before('<li><a href="#"><span>' + now_day + '</span></a></li>');
+        }
     </script>
     <div>
         <nav class="navbar navbar-default navbar-fixed-top">
@@ -78,12 +99,13 @@
                                 data-target="#bs-example-navbar-collapse-6" aria-expanded="false"><span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
                         </button>
-                        <a href="#" class="navbar-brand">Days</a></div>
+                        <a href="#" class="navbar-brand">Days</a>
+                    </div>
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
                         <ul class="nav navbar-nav">
                             <li class="active"><a href="#"><span>1</span></a></li>
                             <li><a href="#"><span>2</span></a></li>
-                            <li id="add_days"><a href="#"><span class="glyphicon glyphicon-plus"></span></a></li>
+                            <li onclick="addDay();" id="add_days"><a href="#"><span class="glyphicon glyphicon-plus"></span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -98,10 +120,14 @@
         </div>
     </div>
 
+    <div id="schedule">
+        <li id="last_schedule_li" style="display: none;">
+    </div>
+
     <hr>
 
-    <div>
-        <div class="input-group">
+    <div id="trip_active_content">
+        <div id="time" class="input-group">
             <span class="input-group-addon" id="basic-addon1">Time</span>
             <input id="timepicker1" placeholder="start at" class="form-control" aria-describedby="basic-addon1">
             <span class="input-group-addon" id="basic-addon1">To</span>
@@ -137,8 +163,11 @@
         </div>
         <br>
         <div>
+            <button onclick="createActive();" type="button" class="btn btn-secondary" style="float: right; margin: 0 10px; width: 100px;">
+                Active <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+            </button>
             <button type="button" class="btn btn-secondary" style="float: right; margin: 0 10px; width: 100px;">
-                <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                Schedule <span class="glyphicon glyphicon-floppy-saved" aria-hidden="true"></span>
             </button>
         </div>
     </div>
